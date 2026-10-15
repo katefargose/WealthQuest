@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101412" />
+    <meta name="description" content="WealthQuest is a financial planning simulation about investing, life events, and building healthy money habits." />
+    <title>WealthQuest | Financial Planning Simulation</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%92%B0%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>WealthQuest</h1>
+      <button id="how-to-play-button" class="how-to-play-button" type="button">How to Play</button>
+    </header>
+
+    <main class="dashboard">
+      <section id="stats" aria-label="Stats"></section>
+      <section id="market" aria-label="Market"></section>
+      <section id="goals" aria-label="Life goals"></section>
+      <section id="portfolio" aria-label="Portfolio"></section>
+      <section id="value-chart" aria-label="Portfolio value history"></section>
+      <section id="journal" aria-label="Journal"></section>
+      <section id="events" aria-label="Events"></section>
+    </main>
+    <section id="game-over-screen" aria-label="Game Over" hidden></section>
+    <section id="new-game-dialog" class="new-game-dialog" aria-label="Start a new game" hidden>
+      <div class="new-game-dialog-panel" role="dialog" aria-modal="true" aria-labelledby="new-game-title">
+        <form class="new-game-form">
+          <h2 id="new-game-title">Start a new game?</h2>
+          <p>Your current progress will be replaced. What should we call you?</p>
+          <label for="player-name">Player name</label>
+          <input id="player-name" name="playerName" type="text" maxlength="40" autocomplete="name" required />
+          <div class="new-game-dialog-actions">
+            <button class="game-over-secondary-button cancel-new-game" type="button">Cancel</button>
+            <button class="view-final-report-button" type="submit">Start New Game</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <dialog id="how-to-play-dialog" class="how-to-play-dialog" aria-labelledby="how-to-play-title">
+      <div class="how-to-play-heading">
+        <h2 id="how-to-play-title">How to Play</h2>
+        <button class="how-to-play-close" type="button" aria-label="Close How to Play">Close</button>
+      </div>
+      <ol>
+        <li><strong>Build wealth.</strong> Grow your portfolio and finish the 24-month journey in good financial shape.</li>
+        <li><strong>Manage monthly cash flow.</strong> Salary is added and expenses are deducted each month; low cash can force investment sales.</li>
+        <li><strong>Prepare for life events.</strong> Some events change your finances automatically, while others ask you to choose.</li>
+        <li><strong>Trade thoughtfully.</strong> Buy or sell assets, select a reason, and track your decisions in the journal.</li>
+        <li><strong>Reach goals and protect your health score.</strong> Build reserves, diversify, and keep an eye on your financial health gauge.</li>
+      </ol>
+    </dialog>
+    <footer class="site-footer">WealthQuest - a financial planning simulation. Prices are simulated and for learning only.</footer>
+  </body>
+</html>
